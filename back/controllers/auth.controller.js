@@ -49,3 +49,5 @@ module.exports.logout = async (req, res) => {
   res.cookie("jwt", "", { maxAge: 1 }); //on attribue un cookie qui va vivre 1ms, puis rediriger l'utilisateur
   res.redirect("/");
 };
+
+
