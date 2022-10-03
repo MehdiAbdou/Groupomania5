@@ -24,11 +24,7 @@ module.exports.signUp = async (req, res) => {
 
 module.exports.signIn = async (req, res) => {
   const { email, password } = req.body; //destructuring comme dans le signUp, on pourrait également faire comme suit:
-  /*
-    const email = req.body.email
-    const password = req.body.password
-    */
-
+  
   try {
     const user = await UserModel.login(email, password);
     const token = createToken(user.id);
